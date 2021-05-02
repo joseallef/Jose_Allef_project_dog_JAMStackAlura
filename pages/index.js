@@ -49,6 +49,7 @@ export default function Home({ resporta }) {
             alt={currentDog.alt}
           />
         </InfoDog>
+        
         <Section>
           {resporta.map((dog) => (
             <li key={dog.id}>
@@ -57,8 +58,7 @@ export default function Home({ resporta }) {
                 RacaSelecionada(dogSelected).then(res => setCurrentDog(res));
                 setState(dogState.DONE);
               }}>
-                {dog.name}
-                {/* <img src={dog.image.url} alt="Imagem cão" /> */}
+              {dog.name}
               </Button>
             </li>
           ))}
